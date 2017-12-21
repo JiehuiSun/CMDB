@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ServerList</title>
+    <link rel="stylesheet" href="/static/plugins/dist/css/bootstrap.css">
+    <script src="/static/plugins/sweetalert/js/sweet-alert.js"></script>
+    <link rel="stylesheet" href="/static/plugins/sweetalert/css/sweet-alert.css">
+    <style>
+        {#        获取数据时加载效果#}
+        .loading {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: white;
+            opacity: 0.4;
+            z-index: 1000;
+
+        }
+
+        {#        获取数据时的加载图片#}
+        .loading .img {
+            height: 32px;
+            width: 32px;
+            background: url("/static/image/wxsx.gif");
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: 16px;
+            margin-top: 16px;
+            z-index: 1001;
+        }
+
+        {#        搜索开始#}
+        .search-area {
+            position: relative;
+        }
+
+        .search-area .search-btn {
+            position: absolute;
+            bottom: 1px;
+        }
+
+        .search-area .search-condition .condition {
+            height: 35px;
+            position: relative;
+        }
+
+        .search-area .search-condition .condition .icons {
+            position: absolute;
+            left: 0;
+            width: 35px;
+            height: 35px;
+
+        }
+
+        .search-area .search-condition .condition .input-group {
+            position: absolute;
+            left: 35px;
+            right: 0;
+            height: 35px;
+        }
+
+        {#        搜索结束#}
+    </style>
+</head>
+<body>
+
+<div class="loading" id="loading">
+    <div class="img"></div>
+</div>
+<div class="container">
+    <!-- 操作提示开始 -->
+    <div id="handleStatus" style="position: fixed;z-index: 9998;width: 500px;left:50%;margin-left:-250px;text-align: center;"></div>
+    <!-- 操作提示开始 -->
+
+    <h1>服务器列表</h1>
+
+    <!-- 组合搜索开始 -->
+    <div class="search-area clearfix">
+        <div id="searchCondition" class="search-condition col-md-offset-2 col-md-8">
+
+            <div class="condition">
+                <div class="icons">
+                    <a class="btn btn-default add-condition">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </a>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <label class="btn btn-default no-radius" type="button" style="width: 100px;"></label>
+                        <button type="button" class="btn btn-default dropdown-toggle no-border-r" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+                        <ul class="change-search-condition dropdown-menu">
+
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="search-btn col-md-offset-10 col-md-2">
+            <a id="doSearch" class="btn btn-primary">搜索</a>
+        </div>
+    </div>
+    <!-- 组合搜索结束 -->
+
+    <!-- 功能按钮开始 -->
+    <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+        <a id="checkAll" class="btn btn-default glyphicon glyphicon-ok-sign">全选</a>
+        <a id="checkCancel" class="btn btn-default glyphicon glyphicon-remove-circle">取消</a>
+        <a id="reverse" class="btn btn-default glyphicon glyphicon-ok-circle">反选</a>
+        <a class="btn btn-default glyphicon glyphicon-plus">添加</a>
+        {#      <a id='delMulti' class="btn btn-default glyphicon glyphicon-remove-circle"  data-target="#delModal"  data-toggle="modal" >删除</a>#}
+        <a id='delMulti' class="btn btn-default glyphicon glyphicon-remove-circle">删除</a>
+        <a id='saveMulti' class="btn btn-default glyphicon glyphicon-floppy-save">保存</a>
+        <a id="editModeStatus" class="btn btn-default glyphicon glyphicon-edit">进入编辑模式</a>
+    </div>
+    <!-- 功能按钮结束 -->
+
+    <!-- 数据开始 -->
+    <table class="table table-bordered">
+        <thead id="tHead">
+        <tr>
+
+        </tr>
+        </thead>
+        <tbody id="tBody">
+
+        </tbody>
+    </table>
+    <!-- 数据结束 -->
+
+    <!-- 分页开始 -->
+    <ul id="pagination" class="pagination"></ul>
+    <!-- 分页结束 -->
+
+</div>
+
+</body>
+<script src="/static/js/jquery-3.2.1.js"></script>
+<script src="/static/js/jquery.cookie.js"></script>
+<script src="/static/js/nb-list.js"></script>
+<script src="/static/plugins/dist/js/bootstrap.js"></script>
+
+<script>
+    $(function () {
+        $.nBList("/server_json.html");
+    })
+</script>
+
+</html>

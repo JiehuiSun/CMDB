@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ceshi</title>
+    <link rel="stylesheet" href="../static/plugins/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>测试</h1>
+        <table class="table table-bordered">
+            <thead id="tHead">
+                <tr>
+                    <th>aaa</th>
+                    <th>bbb</th>
+                    <th>ccc</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="tBody">
+                <tr>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td><span id="edit">编辑</span> | <span id="clean">取消</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+</body>
+<script src="../static/js/jquery-3.2.1.js"></script>
+
+<script>
+
+    $('#edit').click(function () {
+        $.each($(this).parent().siblings(),function (k,v) {
+            var bbb = document.createElement('input');
+            bbb.setAttribute('value',v.innerHTML);
+            $(this).text('');
+            $(this).append(bbb)
+        })
+    });
+
+    $('#tBody').on('click','#clean',function () {
+        $.each($(this).parent().siblings(),function (k,v) {
+{#            console.log(k,v.firstElementChild.value);#}
+            $(this).text(v.firstElementChild.value);
+    })})
+</script>
+</html>

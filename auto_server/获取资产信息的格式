@@ -1,0 +1,135 @@
+
+
+{
+'nic':
+    {
+    'status': True,
+    'data': {
+        'eth0':
+            {
+            'up': True,
+            'hwaddr': '00:1c:42:a5:57:7a',
+            'ipaddrs': '10.211.55.4',
+            'netmask': '255.255.255.0'
+            }
+        eth1
+    },
+     'msg': None
+     },
+'disk':
+    {
+    'status': True,
+    'data': {'0': {'slot': '0', 'pd_type': 'SAS', 'capacity': '279.396', 'model': 'SEAGATE ST300MM0006     LS08S0K2B5NV'}, '1': {'slot': '1', 'pd_type': 'SAS', 'capacity': '279.396', 'model': 'SEAGATE ST300MM0006     LS08S0K2B5AH'}, '2': {'slot': '2', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1SZNSAFA01085L     Samsung SSD 850 PRO 512GB               EXM01B6Q'}, '3': {'slot': '3', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1AXNSAF912433K     Samsung SSD 840 PRO Series              DXM06B0Q'}, '4': {'slot': '4', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1AXNSAF303909M     Samsung SSD 840 PRO Series              DXM05B0Q'}, '5': {'slot': '5', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1AXNSAFB00549A     Samsung SSD 840 PRO Series              DXM06B0Q'}}, 'msg': None}, 'board': {'status': True, 'data': {'manufacturer': 'Parallels Software International Inc.', 'model': 'Parallels Virtual Platform', 'sn': 'Parallels-1A 1B CB 3B 64 66 4B 13 86 B0 86 FF 7E 2B 20 30'}, 'msg': None}, 'basic': {'status': True, 'data': {'os_platform': 'linux', 'os_version': 'CentOS release 6.6 (Final)\nKernel \r on an \\m', 'hostname': 'c1.com'}, 'msg': None}, 'memory': {'status': False, 'data': None, 'msg': 'Traceback (most recent call last):\n  File "E:\\oldboy_py\\武sir\\day87\\auto_client\\src\\plugins\\__init__.py", line 41, in exec_plugin\n    cls = getattr(module,cls_name) # 反射找到class\nAttributeError: module \'src.plugins.memory\' has no attribute \'Memory\'\n'}} <class 'dict'>
+
+
+
+
+
+
+server_info
+
+{
+'os_platform': 'linux',
+'os_version': 'CentOS release 6.6 (Final)\nKernel \r on an \\m',
+'hostname': 'c1.com'
+}
+
+
+
+"""
+
+{
+'nic': {
+'status': True,
+    'data': {'eth0': {'up': True, 'hwaddr': '00:1c:42:a5:57:7a', 'ipaddrs': '10.211.55.4', 'netmask': '255.255.255.0'}},
+ 'msg': None},
+ 'disk': {'status': True,
+ 'data': {'0': {'slot': '0', 'pd_type': 'SAS', 'capacity': '279.396', 'model': 'SEAGATE ST300MM0006     LS08S0K2B5NV'},
+         '1': {'slot': '1', 'pd_type': 'SAS', 'capacity': '279.396', 'model': 'SEAGATE ST300MM0006     LS08S0K2B5AH'},
+         '2': {'slot': '2', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1SZNSAFA01085L     Samsung SSD 850 PRO 512GB               EXM01B6Q'},
+         '3': {'slot': '3', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1AXNSAF912433K     Samsung SSD 840 PRO Series              DXM06B0Q'},
+         '4': {'slot': '4', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1AXNSAF303909M     Samsung SSD 840 PRO Series              DXM05B0Q'},
+         '5': {'slot': '5', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1AXNSAFB00549A     Samsung SSD 840 PRO Series              DXM06B0Q'}},
+  'msg': None},
+'board': {'status': True,
+        'data': {
+        'manufacturer': 'Parallels Software International Inc.',
+        'model': 'Parallels Virtual Platform',
+         'sn': 'Parallels-1A 1B CB 3B 64 66 4B 13 86 B0 86 FF 7E 2B 20 30'
+         },
+    'msg': None},
+'basic': {'status': True,
+    'data': {
+    'os_platform': 'linux',
+     'os_version': 'CentOS release 6.6 (Final)\nKernel \r on an \\m',
+     'hostname': 'c1.com'}, 'msg': None},
+  'memory': {'status': True,
+  'data': {
+        'DIMM #0': {
+            'capacity': 1024,
+             'slot': 'DIMM #0',
+              'model': 'DRAM',
+              'speed': '667 MHz',
+              'manufacturer': 'Not Specified',
+              'sn': 'Not Specified'},
+          'DIMM #1': {
+                'capacity': 0,
+                 'slot': 'DIMM #1',
+                 'model': 'DRAM',
+                  'speed': '667 MHz',
+                  'manufacturer':
+                   'Not Specified',
+                   'sn': 'Not Specified'},
+           'DIMM #2': {
+                   'capacity': 0,
+                   'slot': 'DIMM #2',
+                    'model': 'DRAM',
+                     'speed': '667 MHz',
+                      'manufacturer':
+                       'Not Specified',
+                        'sn': 'Not Specified'},
+            'DIMM #3': {
+                'capacity': 0,
+                 'slot': 'DIMM #3',
+                 'model': 'DRAM',
+                 'speed': '667 MHz',
+                  'manufacturer': 'Not Specified',
+                   'sn': 'Not Specified'},
+            'DIMM #4': {
+                'capacity': 0,
+                'slot': 'DIMM #4',
+                 'model': 'DRAM',
+                 'speed': '667 MHz',
+                  'manufacturer': 'Not Specified',
+                  'sn': 'Not Specified'},
+          'DIMM #5': {
+                'capacity': 0,
+                 'slot': 'DIMM #5',
+                  'model': 'DRAM',
+                   'speed': '667 MHz',
+                   'manufacturer': 'Not Specified',
+                    'sn': 'Not Specified'},
+            'DIMM #6': {
+                    'capacity': 0,
+                    'slot': 'DIMM #6',
+                    'model': 'DRAM',
+                    'speed': '667 MHz',
+                     'manufacturer':
+                     'Not Specified',
+                     'sn': 'Not Specified'},
+              'DIMM #7': {
+                'capacity': 0,
+                'slot': 'DIMM #7',
+                 'model': 'DRAM',
+                  'speed': '667 MHz',
+                  'manufacturer':
+                  'Not Specified',
+                   'sn': 'Not Specified'}},
+   'msg': None}}
+
+
+"""
+
+
+
+{'nic': {'status': True, 'data': {'eth0': {'up': True, 'hwaddr': '00:1c:42:a5:57:7a', 'ipaddrs': '10.211.55.4', 'netmask': '255.255.255.0'}}, 'msg': None}, 'disk': {'status': True, 'data': {'0': {'slot': '0', 'pd_type': 'SAS', 'capacity': '279.396', 'model': 'SEAGATE ST300MM0006     LS08S0K2B5NV'}, '1': {'slot': '1', 'pd_type': 'SAS', 'capacity': '279.396', 'model': 'SEAGATE ST300MM0006     LS08S0K2B5AH'}, '2': {'slot': '2', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1SZNSAFA01085L     Samsung SSD 850 PRO 512GB               EXM01B6Q'}, '3': {'slot': '3', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1AXNSAF912433K     Samsung SSD 840 PRO Series              DXM06B0Q'}, '4': {'slot': '4', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1AXNSAF303909M     Samsung SSD 840 PRO Series              DXM05B0Q'}, '5': {'slot': '5', 'pd_type': 'SATA', 'capacity': '476.939', 'model': 'S1AXNSAFB00549A     Samsung SSD 840 PRO Series              DXM06B0Q'}}, 'msg': None}, 'board': {'status': True, 'data': {'manufacturer': 'Parallels Software International Inc.', 'model': 'Parallels Virtual Platform', 'sn': 'Parallels-1A 1B CB 3B 64 66 4B 13 86 B0 86 FF 7E 2B 20 30'}, 'msg': None}, 'basic': {'status': True, 'data': {'os_platform': 'linux', 'os_version': 'CentOS release 6.6 (Final)\nKernel \r on an \\m', 'hostname': 'c1.com'}, 'msg': None}, 'memory': {'status': False, 'data': None, 'msg': 'Traceback (most recent call last):\n  File "E:\\oldboy_py\\武sir\\day87\\auto_client\\src\\plugins\\__init__.py", line 40, in exec_plugin\n    module = importlib.import_module(module_path) # 导入模块\n  File "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\lib\\importlib\\__init__.py", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File "<frozen importlib._bootstrap>", line 978, in _gcd_import\n  File "<frozen importlib._bootstrap>", line 961, in _find_and_load\n  File "<frozen importlib._bootstrap>", line 950, in _find_and_load_unlocked\n  File "<frozen importlib._bootstrap>", line 655, in _load_unlocked\n  File "<frozen importlib._bootstrap_external>", line 678, in exec_module\n  File "<frozen importlib._bootstrap>", line 205, in _call_with_frames_removed\n  File "E:\\oldboy_py\\武sir\\day87\\auto_client\\src\\plugins\\memory.py", line 4, in <module>\n    from lib import convert\nImportError: cannot import name \'convert\'\n'}} <class 'dict'>

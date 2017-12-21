@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ceshi</title>
+</head>
+<body>
+<ul>
+    {% for server in server_list %}
+        <li>
+        {{ server.hostname }}={{ server.server_status_id_name }}
+        </li>
+    {% endfor %}
+
+</ul>
+
+</body>
+</html>
